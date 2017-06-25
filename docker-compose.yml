@@ -1,0 +1,20 @@
+version: "2"
+services:
+  app_server_a:
+    image: flask
+    container_name: app_server_a
+    ports:
+      - "8001:8001"
+    build:
+      context: ./app_server
+    environment:
+      - PORT=8001
+  app_server_b:
+    image: flask
+    container_name: app_server_b
+    ports:
+      - "8002:8002"
+    build:
+      context: ./app_server
+    environment:
+      - PORT=8002
