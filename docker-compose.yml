@@ -22,6 +22,7 @@ services:
       context: ./app_server
     environment:
       - PORT=8001
+      - ENV=A
   app_server_b:
     container_name: app_server_b
     ports:
@@ -30,3 +31,4 @@ services:
       context: ./app_server
     environment:
       - PORT=8002
+      - ENV=B
